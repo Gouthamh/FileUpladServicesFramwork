@@ -1,0 +1,71 @@
+package test;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.ViewName;
+import org.testng.*;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class CustomTestListener implements ITestListener, ISuiteListener {
+
+
+    ExtentReports extent;
+    ExtentTest test;
+
+    @Override
+    public void onStart(ITestContext context) {
+        String reportFilePath = "FileUploadServiceReport";
+        extent = new ExtentReports();
+
+        ExtentSparkReporter htmlReporter = new ExtentSparkReporter(reportFilePath)
+                .viewConfigurer()
+                .viewOrder()
+                .as(new ViewName[]{
+                        ViewName.DASHBOARD,
+                        ViewName.TEST,
+                        ViewName.AUTHOR,
+                        ViewName.DEVICE,
+                        ViewName.EXCEPTION,
+                        ViewName.LOG
+                })
+                .apply();
+
+        extent.attachReporter(htmlReporter);
+
+        logger.info("Extent report initialized.");
+    }
+
+    @Override
+    public void onTestStart(ITestResult result) {
+        test = extent.createTest(result.getMethod().getMethodName());
+        logger.info("Test started: " + result.getMethod().getMethodName());
+    }
+
+    @Override
+    public void onTestSuccess(ITestResult result) {
+        test.pass(result.getName().toUpperCase());
+        logger.info("Test passed: " + result.getName());
+    }
+
+    @Override
+    public void onTestFailure(ITestResult result) {
+        logger.severe("Test failed: " + result.getName());
+    }
+
+    @Override
+    public void onTestSkipped(ITestResult result) {
+        logger.warning("Test skipped: " + result.getName());
+    }
+
+    @Override
+    public void onFinish(ITestContext context) {
+        extent.flush();
+        logger.info("Extent report flushed.");
+    }
+
+    // Implement other methods as needed, such as onTestFailedButWithinSuccessPercentage
+}

@@ -1,0 +1,14 @@
+package com.tecnotree.automatiom.Listerns;
+
+import org.testng.SkipException;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+
+public class TC2 extends BTest{
+
+@Test
+	public void test4() {
+		System.out.println("---------------------");
+	}
+}

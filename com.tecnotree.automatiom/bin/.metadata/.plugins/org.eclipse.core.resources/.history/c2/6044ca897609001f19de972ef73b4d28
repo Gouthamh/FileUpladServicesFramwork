@@ -1,0 +1,19 @@
+package com.tecnotree.automatiom.Listerns;
+
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+@Listeners(com.tecnotree.automatiom.Listerns.TestNGListernsManagers.class)
+public class TC1 {
+	
+	@Test
+	public void one() {
+		System.out.println("-----------------");
+	}
+	
+	@Test
+	public void two() {
+		System.out.println("-----------------");
+	}
+
+}

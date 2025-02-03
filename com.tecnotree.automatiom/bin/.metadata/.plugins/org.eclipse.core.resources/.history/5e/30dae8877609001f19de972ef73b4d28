@@ -1,0 +1,31 @@
+package com.tecnotree.automatiom.Listerns;
+
+import org.testng.SkipException;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+
+@Listeners(com.tecnotree.automatiom.Listerns.TestNGListernsManagers.class)
+public class TC2 {
+
+	@Test
+	public void test1() {
+		System.out.println("---------------------");
+		throw new SkipException("Skiping");
+	}
+	
+	@Test
+	public void test2() {
+		System.out.println("---------------------");
+		throw new Error("error");
+	}
+	
+	@Test
+	public void test3() {
+		System.out.println("---------------------");
+		int i=1/0;
+	}
+	public void test4() {
+		System.out.println("---------------------");
+	}
+}

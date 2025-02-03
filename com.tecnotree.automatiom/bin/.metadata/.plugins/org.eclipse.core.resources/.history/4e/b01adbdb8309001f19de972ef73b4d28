@@ -1,0 +1,24 @@
+package com.tecnotree.automatiom.Listerns;
+
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.Status;
+
+public class TC1 extends BTest {
+	
+	@Test
+	public void one() {
+		Extent.getTest().generateLog(Status.INFO, "dfgh1");
+
+		System.out.println("-----------------");
+	}
+	
+	@Test
+	public void two() {
+		Extent.getTest().generateLog(Status.INFO, "dfgh1");
+
+		System.out.println("-----------------");
+	}
+
+}

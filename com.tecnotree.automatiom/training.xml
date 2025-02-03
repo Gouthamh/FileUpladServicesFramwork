@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+<listener class-name="test.RetryListenerClass"></listener>
+</listeners>
+	<test name="Test">
+		<classes>
+
+			<class name="test.TEST001Test">
+				<methods>
+					<include name="test11Test"></include>
+					<include name="test12Test"></include>
+					<include name="test13Test"></include>
+
+				</methods>
+
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
