@@ -34,7 +34,6 @@
     <fullyQualifiedTypeName name="com.aventstack.extentreports.gherkin.model.When"/>
     <fullyQualifiedTypeName name="io.restassured.response.Response"/>
     <fullyQualifiedTypeName name="com.aventstack.extentreports.gherkin.model.Given"/>
-    <fullyQualifiedTypeName name="io.restassured.RestAssured"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="org.testng.annotations.AfterClass"/>
     <fullyQualifiedTypeName name="com.aventstack.extentreports.reporter.configuration.ViewName"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="org.testng.IAnnotationTransformer"/>
     <fullyQualifiedTypeName name="org.testng.annotations.ITestAnnotation"/>
     <fullyQualifiedTypeName name="test.RetryAnalyzer"/>
+    <fullyQualifiedTypeName name="io.restassured.RestAssured"/>
 </qualifiedTypeNameHistroy>

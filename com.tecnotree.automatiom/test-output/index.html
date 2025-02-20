@@ -5,9 +5,8 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,9 +20,9 @@
      -->
   </head>
 
-  <body>    <div class="top-banner-root">
+  <body>
+    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
-      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
@@ -109,7 +108,7 @@
                     </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Retried methods</span>
+                    <span class="method-list-title skipped">Skipped methods</span>
                     <span class="show-or-hide-methods skipped">
                       <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
                       <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
@@ -174,8 +173,7 @@
                   <span class="method-name">test13Test</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
 	at test.TEST001Test.test13Test(TEST001Test.java:35)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 29 stack frames
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -194,8 +192,7 @@
                   <span class="method-name">test13Test</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
 	at test.TEST001Test.test13Test(TEST001Test.java:35)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 29 stack frames
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -206,8 +203,7 @@
                   <span class="method-name">test13Test</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
 	at test.TEST001Test.test13Test(TEST001Test.java:35)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 29 stack frames
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -218,8 +214,7 @@
                   <span class="method-name">test13Test</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
 	at test.TEST001Test.test13Test(TEST001Test.java:35)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 29 stack frames
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -255,12 +250,12 @@
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;test.RetryListenerClass&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+  &lt;test name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;test.TEST001Test&quot;&gt;
         &lt;methods&gt;
@@ -312,23 +307,23 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test11Test')
 data.setCell(0, 2, 'test.TEST001Test')
-data.setCell(0, 3, 3018);
+data.setCell(0, 3, 3041);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'test13Test')
 data.setCell(1, 2, 'test.TEST001Test')
-data.setCell(1, 3, 3015);
+data.setCell(1, 3, 3019);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'test13Test')
+data.setCell(2, 1, 'test12Test')
 data.setCell(2, 2, 'test.TEST001Test')
-data.setCell(2, 3, 3014);
+data.setCell(2, 3, 3012);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'test13Test')
 data.setCell(3, 2, 'test.TEST001Test')
-data.setCell(3, 3, 3012);
+data.setCell(3, 3, 3009);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'test12Test')
+data.setCell(4, 1, 'test13Test')
 data.setCell(4, 2, 'test.TEST001Test')
-data.setCell(4, 3, 3007);
+data.setCell(4, 3, 3008);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'test13Test')
 data.setCell(5, 2, 'test.TEST001Test')
@@ -370,30 +365,29 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">test12Test</span>
-                <span class="method-start">3024 ms</span>
+                <span class="method-start">3044 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">test13Test</span>
-                <span class="method-start">6034 ms</span>
+                <span class="method-start">6061 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">test13Test</span>
-                <span class="method-start">9053 ms</span>
+                <span class="method-start">9089 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">test13Test</span>
-                <span class="method-start">12067 ms</span>
+                <span class="method-start">12101 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">test13Test</span>
-                <span class="method-start">15084 ms</span>
+                <span class="method-start">15111 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
-<script type="text/javascript" src="testng-reports2.js"></script>
 </html>

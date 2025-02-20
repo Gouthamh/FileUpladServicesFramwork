@@ -74,5 +74,23 @@ public class CustomTestListener implements ITestListener ,ISuiteListener{
         extent.flush();
     }
 
+	@Override
+	public void onStart(ISuite suite) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onFinish(ISuite suite) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+	}
+
     // Implement other methods as needed, such as onTestFailedButWithinSuccessPercentage
 }

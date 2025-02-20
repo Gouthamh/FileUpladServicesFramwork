@@ -1,7 +1,0 @@
-package test;
-
-import org.testng.IAnnotationTransformer;
-
-public class RetryListenerClass implements IAnnotationTransformer {
-
-}

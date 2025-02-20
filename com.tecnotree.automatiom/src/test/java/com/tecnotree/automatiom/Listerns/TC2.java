@@ -11,7 +11,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 
-public class TC2 implements ITestListener{
+public abstract class TC2 implements ITestListener{
 
 @Override
 	public void onTestStart(ITestResult result) {
@@ -19,7 +19,6 @@ public class TC2 implements ITestListener{
 	ExtentTest test = ExtendManger.getInstance().createTest(result.getMethod().getMethodName());
 	Extent.setTest(test);
 	System.out.println("-----------------------------");
-		ITestListener.super.onTestStart(result);
 	}
 
 	@Override
@@ -28,7 +27,6 @@ public class TC2 implements ITestListener{
 		System.out.println("-----------------------------");
 
 		Extent.getTest().log(Status.PASS,result.getMethod().getMethodName());
-		ITestListener.super.onTestSuccess(result);
 	}
 
 	@Override
@@ -36,7 +34,6 @@ public class TC2 implements ITestListener{
 		// TODO Auto-generated method stub
 		Extent.getTest().log(Status.FAIL,result.getMethod().getMethodName());
 
-		ITestListener.super.onTestFailure(result);
 	}
 
 	@Override
@@ -44,33 +41,15 @@ public class TC2 implements ITestListener{
 		// TODO Auto-generated method stub
 		Extent.getTest().log(Status.SKIP,result.getMethod().getMethodName());
 
-		ITestListener.super.onTestSkipped(result);
 	}
 
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		// TODO Auto-generated method stub
-		ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
 	}
 
-	@Override
-	public void onTestFailedWithTimeout(ITestResult result) {
-		// TODO Auto-generated method stub
-		ITestListener.super.onTestFailedWithTimeout(result);
-	}
 
-	@Override
-	public void onStart(ITestContext context) {
-		// TODO Auto-generated method stub
-		ITestListener.super.onStart(context);
-	}
 
-	@Override
-	public void onFinish(ITestContext context) {
-		// TODO Auto-generated method stub
-		ExtendManger.getInstance().flush();
-		ITestListener.super.onFinish(context);
-	}
 
 @Test
 	public void test4() {

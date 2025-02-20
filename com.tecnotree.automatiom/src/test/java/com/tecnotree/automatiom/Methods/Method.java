@@ -6,6 +6,8 @@ import com.tecnotree.automatiom.Specifications.Specifiactions;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
 import java.io.File;
 
 
@@ -23,6 +25,7 @@ public class Method {
 		
 		return response;
 	}
+
 	
 	public static Response Post(String requestformate,String BaseUrl,String MiddleUrl,String endpoints,String Bearer_tocken) {
 		Response response =  RestAssured.given(Specifiactions.Requestspeci(BaseUrl,MiddleUrl))

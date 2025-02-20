@@ -10,6 +10,7 @@ import org.testng.ISuite;
 import org.testng.ISuiteResult;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
+import org.testng.xml.XmlSuite;
 
 public class LocalExceptionChangingListener implements IInvokedMethodListener, IReporter{
 	
@@ -48,5 +49,25 @@ public class LocalExceptionChangingListener implements IInvokedMethodListener, I
 	    System.err.println("Failure cause " + result.getThrowable().getMessage());
 	    System.err.println("Exception object " + result.getThrowable().getClass().getName());
 	  }
+
+
+
+
+
+	@Override
+	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+
+	@Override
+	public void beforeInvocation(IInvokedMethod method, ITestResult testResult) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="localHost22"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="cuc"/>
 			<item value="FileUploadSftp"/>
 			<item value="SFTP_Info.sftppath_10_4_3_95"/>
 			<item value="SFTP_Info.sshKey_10_4_3_95"/>
@@ -22,7 +23,6 @@
 			<item value="BulkNotificationServices"/>
 			<item value="getCountFromTable"/>
 			<item value="statement"/>
-			<item value="setdown_ended"/>
 		</list>
 		<list key="replacehistory">
 			<item value="localHost22"/>
